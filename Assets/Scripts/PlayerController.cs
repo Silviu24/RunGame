@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 	private float gravity = 12.0f;
 	private float verticalVelocity = 0.0f;
 	private float speed = 5.0f;
-	private float animationDuration = 2.0f;
+	private float animationDuration = 2.0f; // disable controller 
 	private float startTime;
 
 	public float timeToWait = 5;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 			return;
 		}
 
-		if (Time.time - startTime < animationDuration) 
+		if (Time.time - startTime < animationDuration) // daca timpul curent este mai mic de 2 secunde nu se realizeaza miscare stanga dreapta
 		{
 			controller.Move (Vector3.forward * speed * Time.deltaTime);
 			return;

@@ -26,7 +26,7 @@ public class TileManager : MonoBehaviour {
 		playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;
 
 		for (int i = 0; i < tilesOnScreen; i++) 
-		{
+		{// cele doua tile de la începutul hartii
 			if (i < 2)
 				SpawnTile (0);
 			else
